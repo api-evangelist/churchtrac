@@ -1,0 +1,39 @@
+aid: churchtrac
+url: https://raw.githubusercontent.com/api-evangelist/churchtrac/refs/heads/main/apis.yml
+name: ChurchTrac
+kind: company
+description: ChurchTrac is all-in-one church management software (ChMS) for small and
+  large churches, covering people and member management, church directory, groups,
+  attendance and check-in, event registration, worship planning and volunteer
+  scheduling, online giving, and fund accounting/budgeting. ChurchTrac does NOT
+  publish a public or partner developer API - there is no documented REST API, API
+  keys, OAuth, or webhooks for building against ChurchTrac data. Its "integrations"
+  are ChurchTrac consuming third-party services (Stripe for giving, SendGrid/Mailchimp
+  for email, Twilio for texting, QuickBooks for accounting, Zoom); member-facing
+  access is via the Church Connect app and embeddable online giving forms, not a
+  programmable API surface. This entry is documented as an honest stub.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Church Management
+- ChMS
+- Nonprofit
+- Membership
+- Online Giving
+- Church Accounting
+- Attendance
+- No Public API
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/churchtrac
+- type: Website
+  url: https://www.churchtrac.com/
+- type: Support
+  url: https://www.churchtrac.com/support
+- type: Plans
+  url: https://www.churchtrac.com/pricing
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

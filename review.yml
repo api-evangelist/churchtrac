@@ -1,0 +1,83 @@
+aid: churchtrac
+name: ChurchTrac
+review:
+  question: Does ChurchTrac expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. ChurchTrac exposes no public API of any
+    kind - no REST, no WebSocket, and no HTTP Server-Sent Events (SSE) surface.
+    With no documented programmatic API to model, there is no event-driven or
+    server-push transport for an AsyncAPI document to describe.
+findings:
+  summary: |
+    ChurchTrac does not publish a documented public WebSocket API - and, more
+    broadly, does not publish any public or partner developer API at all. As of
+    the review date there is no documented REST base URL, API reference, API key
+    or OAuth mechanism, and no documented webhooks, SSE, or WebSocket (ws:// or
+    wss://) endpoint for reading or writing ChurchTrac data. What ChurchTrac
+    calls "integrations" are ChurchTrac consuming third-party services on the
+    church's behalf (Stripe, SendGrid, Mailchimp, Twilio, QuickBooks Online,
+    Zoom, Microsoft Outlook), not an API that ChurchTrac exposes. Member and
+    public access is via the Church Connect member app and embeddable online
+    giving forms (an iframe/embed snippet), neither of which is a programmable
+    API. This provider is therefore documented as an honest stub.
+  publicApi: |
+    None documented. Unlike several competing church management platforms
+    (ChurchTools ~800 endpoints, ChurchSuite OAuth2 Core API, Fellowship One
+    REST, Planning Center), ChurchTrac provides no developer portal, API
+    reference, or credential-issuing mechanism for third-party developers.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API, base URL, or API reference is documented for ChurchTrac data.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No HTTP Server-Sent Events streaming surface is documented.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in ChurchTrac's product, support, or pricing pages as of the review date.
+    - protocol: Webhook
+      scheme: https
+      documented: false
+      note: No outbound webhooks or event subscriptions are documented for developers.
+  endpointsConfirmedRest: []
+  endpointsModeled: none
+  integrationsNote: |
+    ChurchTrac's marketed integrations are inbound (ChurchTrac calling other
+    providers), not an exposed API - Stripe (giving/payments), SendGrid /
+    Mailchimp / Constant Contact (email), Twilio (texting), QuickBooks Online
+    (accounting), Zoom and Microsoft Outlook (meetings/calendar). Online giving
+    forms can be embedded on a church website via an embed snippet; Church
+    Connect is a member-facing app. None of these constitute a public developer
+    API.
+sources:
+  - url: https://www.churchtrac.com/
+    type: Website
+    note: Product homepage and feature set; no developer/API section.
+  - url: https://www.churchtrac.com/support
+    type: Support
+    note: Help center; no API reference, API keys, webhooks, or developer docs found.
+  - url: https://www.churchtrac.com/support/connect
+    type: Documentation
+    note: Church Connect is a member-facing app plus embeddable giving forms, not an API.
+  - url: https://www.churchtrac.com/pricing
+    type: Plans
+    note: Subscription pricing tiered by number of names tracked; not API/usage-metered.
+  - url: https://www.linkedin.com/company/churchtrac
+    type: LinkedIn
+    note: Company profile - Jacksonville, FL ChMS, founded 2003, 2-10 employees.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket surface exists, and no public API of any kind is documented.
+    apis.yml was authored as an honest stub with no `apis` collection and no
+    fabricated OpenAPI, plans, rate-limit, or FinOps artifacts. No AsyncAPI
+    document was created because there is no server-push (or any) API transport
+    on ChurchTrac's side to model.
