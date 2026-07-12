@@ -26,6 +26,8 @@ created: '2026-07-03'
 modified: '2026-07-03'
 specificationVersion: '0.19'
 common:
+- type: DomainSecurity
+  url: security/churchtrac-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/churchtrac
 - type: Website
@@ -34,6 +36,8 @@ common:
   url: https://www.churchtrac.com/support
 - type: Plans
   url: https://www.churchtrac.com/pricing
+- url: https://www.churchtrac.com/blog
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
