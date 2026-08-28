@@ -12,6 +12,17 @@ description: ChurchTrac is all-in-one church management software (ChMS) for smal
   for email, Twilio for texting, QuickBooks for accounting, Zoom); member-facing
   access is via the Church Connect app and embeddable online giving forms, not a
   programmable API surface. This entry is documented as an honest stub.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
