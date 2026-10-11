@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "churchtrac",
+    "captured_at": "2026-10-11T184349",
+    "source_url": "https://www.churchtrac.com/",
+    "source_type": "Website",
+    "file": "churchtrac-2026-10-11T184349.png",
+    "bytes": 182409,
+    "capture": "playwright-local"
+  }
+]
