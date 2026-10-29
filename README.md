@@ -64,68 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ChurchTrac is all-in-one church management software (ChMS) headquartered in
-Jacksonville, Florida, founded in 2003 by Byron Tedder. It serves small and large
-churches with people/member management, church directory, groups, attendance and
-check-in, event registration, worship planning and volunteer scheduling, online
-giving, and fund accounting/budgeting. Website: https://www.churchtrac.com/
+ChurchTrac is all-in-one church management software (ChMS) for small and large churches, covering people and member management, church directory, groups, attendance and check-in, event registration, worship planning and volunteer scheduling, online giving, and fund accounting/budgeting. ChurchTrac does NOT publish a public or partner developer API - there is no documented REST API, API keys, OAuth, or webhooks for building against ChurchTrac data. Its "integrations" are ChurchTrac consuming third-party services (Stripe for giving, SendGrid/Mailchimp for email, Twilio for texting, QuickBooks for accounting, Zoom); member-facing access is via the Church Connect app and embeddable online giving forms, not a programmable API surface. This entry is documented as an honest stub.
 
-## API Access Model — Honest Stub (No Public API)
+**Areas:** Church Management · ChMS · Non-Profit · Membership · Online Giving · Church Accounting · Attendance
 
-**ChurchTrac does not publish a public or partner developer API.** As of this
-review (2026-07-03), there is:
+## ChurchTrac on APIs.io
 
-- **No documented REST API**, base URL, or API reference for ChurchTrac data.
-- **No API keys, OAuth, or personal access tokens** for third-party developers.
-- **No documented webhooks** or event/streaming surface (no WebSocket, no SSE).
-- **No Zapier/Make integration** published by ChurchTrac.
+Everything profiled for ChurchTrac is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/churchtrac/](https://apis.io/providers/churchtrac/)** — or go straight to one of the APIs or properties below.
 
-What ChurchTrac markets as "integrations" are **ChurchTrac consuming other
-providers' APIs on the church's behalf**, not an API that ChurchTrac exposes:
+### Published properties
 
-- **Stripe** — payment processing for online giving.
-- **SendGrid / Mailchimp / Constant Contact** — email delivery and list sync.
-- **Twilio** — church texting / enhanced messaging.
-- **QuickBooks Online** — accounting export/sync.
-- **Zoom, Microsoft Outlook** — meetings and calendar.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Member- and public-facing access is delivered through the **Church Connect** app
-(a member portal / mobile experience) and **embeddable online giving forms**
-(iframe/embed snippet you place on a church website) — neither is a programmable
-API for reading or writing ChurchTrac records.
+#### Security (1)
 
-This entry is intentionally a stub. No `openapi/`, `plans/`, `rate-limits/`,
-`finops/`, or `collections/` artifacts were fabricated because no sourced API,
-rate-limit, or programmatic-billing details exist to model. If ChurchTrac ships a
-documented developer API in the future, this repo should be upgraded from stub to
-a full APIs.json 0.19+ catalog with real `apis` entries and an OpenAPI document.
+Authentication, trust centre, and vulnerability disclosure.
 
-For comparison, several competing ChMS platforms *do* offer public/partner APIs
-(ChurchTools, ChurchSuite, Fellowship One, Planning Center), which is why the
-absence of one here is documented explicitly rather than assumed.
+- [Churchtrac Domain Security](https://apis.io/security/churchtrac/churchtrac-domain-security/)
 
-## Pricing
+## Where to find this API
 
-ChurchTrac pricing starts at roughly **$9/month** and is tiered by the number of
-people ("names") you track — plan tiers around 75, 125, 250, 500, 1,000, and
-unlimited names — plus optional add-ons (Enhanced Messaging/texting credits,
-accounting service). A free trial is available. See
-https://www.churchtrac.com/pricing for current tiers. Note: this is
-**subscription pricing for the software product**, not API/usage-metered pricing,
-because there is no API to meter.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## Files
+- [Website](https://www.churchtrac.com/)
+- [Support](https://www.churchtrac.com/support)
+- [Blog](https://www.churchtrac.com/blog)
 
-- `apis.yml` — APIs.json 0.19 provider descriptor (company-level; no `apis`
-  collection because there is no public API).
-- `review.yml` — API Evangelist review answering whether ChurchTrac exposes a
-  documented public WebSocket API (it does not; it exposes no public API at all).
-- `README.md` — this file.
+## API Evangelist rating
 
-## Sources
+**Kin Score 4.9** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-- https://www.churchtrac.com/ — product homepage and feature set.
-- https://www.churchtrac.com/support — support/help center (no developer API docs).
-- https://www.churchtrac.com/support/connect — Church Connect member app.
-- https://www.churchtrac.com/pricing — per-names subscription tiers.
-- https://www.linkedin.com/company/churchtrac — company profile (Jacksonville, FL).
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/churchtrac/](https://apis.io/providers/churchtrac/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ChurchTrac: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/churchtrac/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
